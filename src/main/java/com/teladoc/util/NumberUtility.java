@@ -7,7 +7,12 @@ public class NumberUtility {
     // smallest possible unicode digit '0', '0' == short 48
     private final static short ZERO_CHAR = 48;
 
-
+    /**
+     *
+     * @param str1 String representation of positive a number
+     * @param str2 String representation of positive a number
+     * @return String representation of resulting number from addition of str1 & str2
+     */
     public String addNumbers(String str1, String str2) {
         // If one of the passed in strings is null , empty or "0" just return the other string
         if (isBlankString(str1) || str1.equals(ZERO_STRING)) {
