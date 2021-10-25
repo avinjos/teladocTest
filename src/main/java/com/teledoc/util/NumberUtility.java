@@ -18,7 +18,7 @@ public class NumberUtility {
         }
 
         // Take an empty String for storing result
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         // Calculate length of both String
         int n1 = str1.length(), n2 = str2.length();
@@ -33,22 +33,22 @@ public class NumberUtility {
             // current digits and carry
             int sum = ((str1.charAt(i) - '0') +
                     (str2.charAt(i + diff) - '0') + carry);
-            result += (char) (sum % 10 + '0');
+            result.append((char) (sum % 10 + '0'));
             carry = sum / 10;
         }
 
         // Add remaining digits of str2[]
         for (int i = n2 - n1 - 1; i >= 0; i--) {
             int sum = ((str2.charAt(i) - '0') + carry);
-            result += (char) (sum % 10 + '0');
+            result.append((char) (sum % 10 + '0'));
             carry = sum / 10;
         }
 
         // Add remaining carry
         if (carry > 0)
-            result += (char) (carry + '0');
+            result.append((char) (carry + '0'));
 
         // reverse resultant String
-        return new StringBuilder(result).reverse().toString();
+        return result.reverse().toString();
     }
 }
