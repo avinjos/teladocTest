@@ -29,8 +29,7 @@ public class NumberUtility {
 
         // Traverse from end of both Strings
         for (int i = n1 - 1; i >= 0; i--) {
-            // Do school mathematics, compute sum of
-            // current digits and carry
+            // compute sum of current digits and carry
             int sum = ((str1.charAt(i) - '0') +
                     (str2.charAt(i + diff) - '0') + carry);
             result.append((char) (sum % 10 + '0'));
