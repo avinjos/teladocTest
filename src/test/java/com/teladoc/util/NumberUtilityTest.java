@@ -1,8 +1,8 @@
 package com.teladoc.util;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NumberUtilityTest {
 
@@ -42,6 +42,26 @@ public class NumberUtilityTest {
     @Test
     void addNumbersTest_LargeNumbers2() {
         assertEquals("", numberUtility.addNumbers("    ", "   "));
+    }
+
+    @Test
+    void isBlankStringTest_WithEmptySpaces() {
+        assertTrue(numberUtility.isBlankString("   "));
+    }
+
+    @Test
+    void isBlankStringTest_WithEmptyString() {
+        assertTrue(numberUtility.isBlankString(EMPTY_STRING));
+    }
+
+    @Test
+    void isBlankStringTest_WithNull() {
+        assertTrue(numberUtility.isBlankString(null));
+    }
+
+    @Test
+    void isBlankStringTest_WithString() {
+        assertFalse(numberUtility.isBlankString("ABC"));
     }
 }
 

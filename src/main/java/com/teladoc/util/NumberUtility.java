@@ -59,4 +59,15 @@ public class NumberUtility {
     boolean isBlankString(String string) {
         return string == null || string.isBlank();
     }
+
+    //Driver code
+    public static void main(String [] args){
+        NumberUtility numberUtility = new NumberUtility();
+        System.out.println("Result = " +  numberUtility.addNumbers("123456789012345678901","12345678"));
+        System.out.println("Result = " +  numberUtility.addNumbers("11","123"));
+        System.out.println("Result = " +  numberUtility.addNumbers("0","123"));
+        System.out.println("Result = " +  numberUtility.addNumbers(null,null));
+        System.out.println("Result = " +  numberUtility.addNumbers("999",null));
+        System.out.println("Result = " +  numberUtility.addNumbers("817",""));
+    }
 }
