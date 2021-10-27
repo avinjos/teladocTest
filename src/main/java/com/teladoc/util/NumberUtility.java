@@ -38,7 +38,7 @@ public class NumberUtility {
         // Initially take carry zero
         int carry = 0;
 
-        // Traverse from end of both Strings
+        // Traverse from end of both Strings and computer sum of digits and carry in each step
         for (int i = n1 - 1; i >= 0; i--) {
             // compute sum of current digits and carry
             int sum = ((str1.charAt(i) - ZERO_CHAR) + (str2.charAt(i + diff) - ZERO_CHAR) + carry);
@@ -68,6 +68,8 @@ public class NumberUtility {
     //Driver code
     public static void main(String [] args){
         NumberUtility numberUtility = new NumberUtility();
+        System.out.println("Result = " +  numberUtility.addNumbers("1234567890123456789016372468321648513759702436782367523475467325786423767853467832186781628768721687168347595294058524390509",
+                "4578623756123784678312764987478137643273467632147461278643675819365607316507843673816056874364374678347283476547325679561975346"));
         System.out.println("Result = " +  numberUtility.addNumbers("123456789012345678901","12345678"));
         System.out.println("Result = " +  numberUtility.addNumbers("11","123"));
         System.out.println("Result = " +  numberUtility.addNumbers("0","123"));
